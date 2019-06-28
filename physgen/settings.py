@@ -154,10 +154,13 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 #Email configuration
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#For local testing
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-#EMAIL_USE_TLS = True
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_PORT = 587
-#EMAIL_HOST_USER = DEFAULT_FROM_EMAIL = 'gmail account'
-#EMAIL_HOST_PASSWORD = 'gmail password'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'exercise.gen@gmail.com'
+EMAIL_HOST_PASSWORD = 'ExGen3394746'
