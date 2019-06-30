@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = open('exgen/secret_key.txt', 'r', encoding='utf-8').readline().strip()
+SECRET_KEY = open('exgen/secret_files/secret_key.txt', 'r', encoding='utf-8').readline().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -163,4 +163,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'exercise.gen@gmail.com'
-EMAIL_HOST_PASSWORD = 'rnqrkmwpgjpltjpn'
+EMAIL_HOST_PASSWORD = open('exgen/secret_files/email_host_password.txt', 'r', encoding='utf-8').readline().strip()
