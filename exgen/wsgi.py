@@ -1,5 +1,5 @@
 """
-WSGI config for physgen project.
+WSGI config for exgen project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'physgen.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'exgen.settings')
 
 application = get_wsgi_application()
