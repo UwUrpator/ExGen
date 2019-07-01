@@ -10,7 +10,7 @@ class TaskForm(forms.ModelForm):
         fields = ('name', 'text', 'formula')
 
 
-class VariableForm(forms.ModelForm):
+class VariablesForm(forms.ModelForm):
 
     class Meta:
         model = Variable

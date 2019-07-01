@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     #local,
     'users',
     'main',
+    'tasks',
 
     #3rd party
     'allauth',

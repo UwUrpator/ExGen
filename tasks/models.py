@@ -3,7 +3,7 @@ from django.db import models
 
 class Task(models.Model):
     name = models.CharField(max_length=30)
-    text = models.CharField()
+    text = models.CharField(max_length=3000)
     formula = models.CharField(max_length=255)
 
 class Variable(models.Model):
