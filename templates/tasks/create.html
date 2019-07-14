@@ -7,7 +7,11 @@
 <div>
     <form method="post">
         {% csrf_token %}
-        <p>{{ task }}</p>
+        <div>
+            {% for field in task %}
+                <p>{{ field.label }} {{ field }}</p>
+            {% endfor %}
+        </div>
         <p>{{ variables }}</p>
         {% blocktrans %}<input type="submit" value="Submit">{% endblocktrans %}
     </form>
