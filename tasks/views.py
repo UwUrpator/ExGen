@@ -10,12 +10,10 @@ def createTask(request):
         task_form = TaskForm(request.POST)
         variables_form = VariablesForm(request.POST)
         if task_form.is_valid() and variables_form.is_valid():
-            task = Task(user=request.user, name=task_form.cleaned_data['name'],
-                        text=task_form.cleaned_data['text'], formula=task_form.cleaned_data['formula'])
+            task = Task(user=request.user, **task_form.cleaned_data)
             task.save()
 
-            variables = Variable(task=task, name=variables_form.cleaned_data['name'],
-                        value=variables_form.cleaned_data['value'])
+            variables = Variable(task=task, **variables_form.cleaned_data)
             variables.save()
     else:
         task_form = TaskForm()
