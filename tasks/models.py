@@ -11,5 +11,5 @@ class Task(models.Model):
 
 class Variable(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
-    name = models.CharField(max_length=5)
+    name = models.CharField(max_length=6)
     value = models.FloatField()
