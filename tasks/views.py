@@ -1,9 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 from tasks.forms import TaskForm, VariablesForm
 from tasks.models import Task, Variable
 
 
+@login_required
 def createTask(request):
     context = dict()
     if request.method == 'POST':
